@@ -5,7 +5,7 @@ import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, JsonPipe],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.html',
   changeDetection: ChangeDetectionStrategy.Eager,
 })
