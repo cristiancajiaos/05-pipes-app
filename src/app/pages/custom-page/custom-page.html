@@ -5,12 +5,69 @@
   <div class="stats shadow">
     <div class="stat">
       <div class="stat-title">ToggleCasePipe</div>
-      <div class="stat-value">{{name() | toggleCase:uppercase()}}</div>
-      <div class="stat-desc">{{name()}}</div>
+      <div class="stat-value">{{ name() | toggleCase: uppercase() }}</div>
+      <div class="stat-desc">{{ name() }}</div>
 
-      <button class="btn btn-primary w-100" (click)="toggleUppercase()">
-        Toggle case
-      </button>
+      <button class="btn btn-primary w-100" (click)="toggleUppercase()">Toggle case</button>
     </div>
   </div>
+
+  <div class="divider my-2"></div>
+
+  <section class="hero-buttons my-2">
+    <h1>Piper personalizados en acción</h1>
+
+    <div class="flex gap-2 justify-end w-foo">
+      <button class="btn btn-primary">
+        Por nombre
+      </button>
+      <button class="btn btn-accent">
+        Por volar
+      </button>
+      <button class="btn btn-secondary">
+        Por color
+      </button>
+      <button class="btn btn-info">
+        Por creador
+      </button>
+    </div>
+  </section>
+
+  <section class="hero-table">
+    <div class="overflow-x-auto w-full">
+      <table class="table table-xs">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Puede volar</th>
+            <th>Color</th>
+            <th>Creador</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (hero of heroes(); track hero.id; let i = $index) {
+            <tr>
+              <th>
+                {{ i + 1 }}
+              </th>
+              <td>
+                {{ hero.name }}
+              </td>
+              <td>
+                {{ hero.canFly }}
+              </td>
+              <td>
+                {{ hero.color }}
+              </td>
+              <td>
+                {{ hero.creator }}
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
 </section>
