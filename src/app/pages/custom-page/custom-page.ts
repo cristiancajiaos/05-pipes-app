@@ -6,10 +6,11 @@ import { HeroColorPipe } from '../../pipes/hero-color-pipe';
 import { ColorMap } from '../../interfaces/hero-interface';
 import { HeroTextColorPipe } from '../../pipes/hero-text-color-pipe';
 import { TitleCasePipe } from '@angular/common';
+import { HeroCreatorPipe } from '../../pipes/hero-creator-pipe';
 
 @Component({
   selector: 'app-custom-page',
-  imports: [ToggleCasePipe, CanflyPipe, HeroColorPipe, HeroTextColorPipe, TitleCasePipe],
+  imports: [ToggleCasePipe, CanflyPipe, HeroColorPipe, HeroTextColorPipe, TitleCasePipe, HeroCreatorPipe],
   templateUrl: './custom-page.html',
   changeDetection: ChangeDetectionStrategy.Eager,
 })

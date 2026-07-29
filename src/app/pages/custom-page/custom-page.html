@@ -69,7 +69,11 @@
                 </span>
               </td>
               <td>
-                {{ hero.creator }}
+                <span class="text-xs w-44"
+                      [class.text-primary]="hero.creator === 0"
+                      [class.text-accent]="hero.creator === 1">
+                    {{ hero.creator | heroCreator }}
+                </span>
               </td>
             </tr>
           }
