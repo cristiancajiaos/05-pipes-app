@@ -63,7 +63,10 @@
                 </span>
               </td>
               <td>
-                {{ hero.color }}
+                <span class="text-xs w-44"
+                      [style.color]="hero.color | heroTextColor">
+                   {{ hero.color | heroColor | titlecase }}
+                </span>
               </td>
               <td>
                 {{ hero.creator }}
